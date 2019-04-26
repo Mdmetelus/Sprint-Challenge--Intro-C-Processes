@@ -17,7 +17,7 @@ int main(int argc, char **argv)
   struct stat fileStat;
 
   // test prints opening
-  printf("test prints opening!\n");
+  printf("\ntest prints opening!\n\n");
 
   if (argc <= 1) // check if there is no input
   {
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
   closedir(od);
 
   // test prints closing
-  printf("test prints closing!\n");
+  printf("\ntest prints closing!\n");
 
       return 0;
 }
