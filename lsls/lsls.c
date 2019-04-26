@@ -45,8 +45,9 @@ int main(int argc, char **argv)
   // Repeatly read and print entries
 
   // Close directory
-  
 
+  closedir(od);
+  
 
   return 0;
 }
