@@ -44,10 +44,15 @@ int main(int argc, char **argv)
 
   // Repeatly read and print entries
 
+  while ((enter = readdir(od)) != NULL)
+  {
+    
+  }
+
   // Close directory
 
   closedir(od);
-  
+
 
   return 0;
 }
