@@ -16,9 +16,9 @@ int main(int argc, char **argv)
 
   struct stat fileStat;
 
+  // test prints opening
+  printf("test prints opening!\n");
 
-
-  
   if (argc <= 1) // check if there is no input
   {
 
@@ -46,13 +46,24 @@ int main(int argc, char **argv)
 
   while ((enter = readdir(od)) != NULL)
   {
-    
+    stat(enter->d_name, &fileStat);
+
+    if (fileStat.st_mode & S_IFDIR)
+    {
+      printf("%s\n", enter->d_name);
+    }
+    else
+    {
+      printf("size: %ldkb\t file: %s\n", fileStat.st_size, enter->d_name);
+    }
   }
 
   // Close directory
 
   closedir(od);
 
+  // test prints closing
+  printf("test prints closing!\n");
 
-  return 0;
+      return 0;
 }
