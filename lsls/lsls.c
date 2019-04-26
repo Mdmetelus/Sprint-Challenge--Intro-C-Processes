@@ -8,6 +8,13 @@
 int main(int argc, char **argv)
 {
   // Parse command line
+  char *dir_name;
+
+  DIR *od;
+
+  struct dirent *enter;
+  
+  struct stat fileStat;
 
   // Open directory
 
