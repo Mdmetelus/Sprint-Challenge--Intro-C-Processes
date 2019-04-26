@@ -40,6 +40,8 @@ int main(int argc, char **argv)
 
   // Open directory
 
+  od = opendir(dir_name);
+
   // Repeatly read and print entries
 
   // Close directory
