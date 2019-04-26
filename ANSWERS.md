@@ -1,5 +1,5 @@
 **1. List all of the main states a process may be in at any point in time on a standard Unix system. Briefly explain what each of these states means.**
-Start is the intial state when the process is created. 
+New: The tarting point. This is the intial state when the process is created. 
 Running state: when the process is being executed by the CPU.
 Waiting state: when the process is stored out of memory and will only be retrieved when needed. 
 Ready State: When the process is ready in memory but is waiting for CPU to execute it. Ready to be executed. 
