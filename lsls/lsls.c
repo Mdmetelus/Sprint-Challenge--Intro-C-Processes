@@ -13,14 +13,38 @@ int main(int argc, char **argv)
   DIR *od;
 
   struct dirent *enter;
-  
+
   struct stat fileStat;
+
+
+
+  
+  if (argc <= 1) // check if there is no input
+  {
+
+    dir_name = "."; // print current directory
+  }
+
+  else if (argc == 2) // if directory in input (argv[1]), make a ref to that directory
+  {
+    dir_name = argv[1];
+  }
+
+  else 
+  {
+    // catch any wrong directories and errors
+    printf("Cannot open dir '%s'!!", argv[1]);
+  }
+
+
 
   // Open directory
 
   // Repeatly read and print entries
 
   // Close directory
+  
+
 
   return 0;
 }
